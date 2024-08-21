@@ -6,11 +6,11 @@ import Container from './components/Container/Container';
 function App() {
   return (
     <div className='todolist'>
-    <MainContent>
-      <Container>
+      <MainContent>
+        <Container>
 
-      </Container>
-    </MainContent>
+        </Container>
+      </MainContent>
     </div>
   );
 }
