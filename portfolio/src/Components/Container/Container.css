@@ -1,0 +1,17 @@
+.MainContainer{
+    background-color: #EFEFEF;
+    height: 100vh;
+    width: 100vw;
+}
+
+.Container{
+    width: 90%;
+    height: 100%;
+}
+
+@media screen and (min-width : 1024px) {
+    .Container{
+        width: 80%;
+        height: 100%;
+    }
+}
