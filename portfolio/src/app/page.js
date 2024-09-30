@@ -7,9 +7,13 @@ import { SocialMedia } from "@/components/SocialMedia";
 
 export default function Home() {
   return (
-    <div className="h-screen w-screen bg-primary-gray flex justify-center">
-      <div className="h-screen w-[85%] ">
+    <main className=" w-screen flex justify-center bg-primary-gray">
+      <div className=" w-[85%] ">
+
+        {/* Header da página */}
         <Header/>
+
+        {/* Section Apresentação */}
         <section className="w-[100%] mt-[100px]">
           <div className="w-[100%] flex items-center justify-between">
 
@@ -24,11 +28,14 @@ export default function Home() {
             </div>
 
           </div>
+
           <div className="flex justify-end mt-[100px]">
-            <SocialMedia/>
+                <SocialMedia/>
           </div>
+
         </section>
+
       </div>
-    </div>
+    </main>
   );
 }

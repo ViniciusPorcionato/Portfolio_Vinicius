@@ -7,22 +7,20 @@ import { FaInstagram } from "react-icons/fa";
 import Image from "next/image";
 
 export const SocialMedia = () => {
+
     return(
-        <div className="w-[20%] flex justify-between">
-            <button>
-                <FaGithub size={50} color={"#011126"}>
-                    <link rel="stylesheet" href="" />
-                </FaGithub>
+        <div className="gap-5 flex justify-between">
+
+            <button onClick={() => window.open('https://github.com/ViniciusPorcionato')}>
+                <FaGithub size={50} color={"#011126"}/>
             </button>
-            <button>
-                <FaLinkedin size={50} color={"#011126"}>
-                    <link rel="stylesheet" href="" />
-                </FaLinkedin>
+
+            <button onClick={() => window.open('https://www.linkedin.com/in/vinicius-porcionato/')}>
+                <FaLinkedin size={50} color={"#011126"}/>
             </button>
-            <button>
-                <FaInstagram size={50} color={"#011126"}>
-                    <link rel="stylesheet" href="" />
-                </FaInstagram>
+
+            <button onClick={() => window.open('https://www.instagram.com/vn.porci_/')}>
+                <FaInstagram size={50} color={"#011126"}/>
             </button>
 
         </div>
@@ -31,20 +29,14 @@ export const SocialMedia = () => {
 export const SocialMediaModal = () => {
     return(
         <div className="w-[100%] flex gap-[30px]">
-            <button>
-                <FaGithub size={30} color={"#011126"}>
-                    <link rel="stylesheet" href="" />
-                </FaGithub>
+            <button onClick={() => window.open('https://github.com/ViniciusPorcionato')}>
+                <FaGithub size={30} color={"#011126"}/>
             </button>
-            <button>
-                <FaLinkedin size={30} color={"#011126"}>
-                    <link rel="stylesheet" href="" />
-                </FaLinkedin>
+            <button onClick={() => window.open('https://www.linkedin.com/in/vinicius-porcionato/')}>
+                <FaLinkedin size={30} color={"#011126"}/>
             </button>
-            <button>
-                <FaInstagram size={30} color={"#011126"}>
-                    <link rel="stylesheet" href="" />
-                </FaInstagram>
+            <button onClick={() => window.open('https://www.instagram.com/vn.porci_/')}>
+                <FaInstagram size={30} color={"#011126"}/>
             </button>
 
         </div>
