@@ -4,12 +4,12 @@
 
 @font-face {
   font-family: Comfortaa;
-  src: url('../Assets/Fonts/Comfortaa/Comfortaa-VariableFont_wght.ttf');
+  src: url('./fonts/Comfortaa/Comfortaa-VariableFont_wght.ttf');
 }
 
 @font-face {
   font-family: Open-Sans;
-  src: url("../Assets/Fonts/Open_Sans/OpenSans-VariableFont_wdth\,wght.ttf");
+  src: url("./fonts/Open_Sans/OpenSans-VariableFont_wdth\,wght.ttf");
 }
 
 body {
@@ -85,4 +85,29 @@ body {
   body {
     @apply bg-background text-foreground;
   }
+}
+ 
+*::-webkit-scrollbar {
+  width: var(--sb-size);
+}
+
+*::-webkit-scrollbar-track {
+  background: var(--sb-track-color);
+  border-radius: 4px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: #C0C0C0;
+  border-radius: 4px;
+}
+
+@supports not selector(::-webkit-scrollbar) {
+  * {
+    scrollbar-color: var(--sb-thumb-color) var(--sb-track-color);
+  }
+}
+
+::selection {
+  background-color: hsl(var(--primary)) !important;
+  color: hsl(var(--background));
 }
