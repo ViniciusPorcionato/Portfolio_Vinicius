@@ -9,6 +9,7 @@ module.exports = {
   theme: {
 	fontFamily:{
 		comfortaa : ["Comfortaa" , "sans-serif"],
+		"comfortaa-bold" : ["Comfortaa-Bold" , "sans-serif"],
 		'open-sans' : ["Open-Sans" , "sans-serif"],
 	  },
   	extend: {
