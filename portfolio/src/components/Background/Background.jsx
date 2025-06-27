@@ -23,44 +23,46 @@ const Background = () => {
 
   return (
     <section
-      id="formacao"
-      className="container mx-auto px-4 bg-[#222222] mt-[10%]"
+      id="experiencia"
+      className="w-full max-w-5xl mx-auto px-4 py-16  mt-[10%]"
     >
-      <h3 className="text-3xl font-poppins-bold text-white text-center">
+      <h3 className="text-3xl font-poppins-bold text-white mb-12 text-center">
         Formação Acadêmica
       </h3>
-      <div className="relative max-w-4xl mt-10 mx-auto">
+      <div className="relative max-w-4xl mx-auto">
         {/* Linha vertical - oculta no mobile */}
-        <div className="hidden md:block absolute left-1/2 -translate-x-1/2 h-full w-0.5 bg-white opacity-30"></div>
+        <div className="hidden md:block absolute left-1/2 top-0 -translate-x-1/2 h-full w-[2px] bg-white opacity-30"></div>
 
         {backgrounds.map((back, index) => (
           <motion.div
             key={index}
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, x: index % 2 === 0 ? 100 : -100 }}
+            whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: index * 0.2 }}
             viewport={{ amount: 0.2 }}
-            className={`mb-12 flex flex-col ${
-              index % 2 === 0 ? "md:flex-row-reverse" : "md:flex-row"
-            } items-center gap-6`}
+            className={`mb-12 flex flex-col md:flex-row items-center w-full ${
+              index % 2 === 0 ? "md:flex-row-reverse" : ""
+            }`}
           >
             <div className="w-full md:w-1/2 flex justify-center md:justify-end">
               <div
-                className={`${
-                  index % 2 === 0 ? "text-right pr-0 md:pr-8" : "hidden"
+                className={`text-center md:text-right px-4 ${
+                  index % 2 === 0 ? "md:pr-8" : "md:pl-8"
                 }`}
-              ></div>
+              >
+                {/* Espaço para texto extra se quiser */}
+              </div>
             </div>
 
             {/* Bolinha - oculta no mobile */}
             <div className="relative z-10 hidden md:block">
-              <div className="w-4 h-4 rounded-full bg-white opacity-35"></div>
+              <div className="w-5 h-5 rounded-full bg-brand-blue shadow-md bg-white opacity-35"></div>
             </div>
 
-            <div className="w-full md:w-1/2">
+            <div className="w-full md:w-1/2 px-4">
               <div
                 className={`bg-[#1A1A1A] p-6 rounded-lg shadow-lg ${
-                  index % 2 === 0 ? "ml-0 md:ml-8" : "mr-0 md:mr-8"
+                  index % 2 === 0 ? "md:ml-8" : "md:mr-8"
                 }`}
               >
                 <div className="flex items-center gap-4 mb-2">
@@ -78,12 +80,10 @@ const Background = () => {
                     </p>
                   </div>
                 </div>
-                <p className="text-white opacity-50 text-sm">
+                <p className="text-white opacity-50 text-sm mb-2">
                   {back.description}
                 </p>
-                <p className="text-white opacity-80 text-sm mt-2">
-                  {back.period}
-                </p>
+                <p className="text-white opacity-80 text-sm">{back.period}</p>
               </div>
             </div>
           </motion.div>

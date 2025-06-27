@@ -1,12 +1,23 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import MinhaLogo from "../../assets/images/MinhaLogo.png";
 import { motion, AnimatePresence } from "framer-motion";
 
 const Header = () => {
   const [open, setOpen] = useState(false);
 
+  useEffect(() => {
+    if (open) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [open]);
+
   return (
-    <header className="bg-[#222222] text-white p-4 z-50 relative">
+    <header className="text-white p-4 z-50 relative">
       <div className="flex justify-between items-center max-w-7xl mx-auto">
         <img
           src={MinhaLogo}
@@ -48,7 +59,6 @@ const Header = () => {
         </button>
       </div>
 
-      {/* Menu mobile deslizando da direita */}
       <AnimatePresence>
         {open && (
           <motion.div
@@ -57,9 +67,9 @@ const Header = () => {
             animate={{ x: 0 }}
             exit={{ x: "100%" }}
             transition={{ type: "tween", duration: 0.4 }}
-            className="fixed top-0 right-0 h-full w-3/4 sm:w-1/2 bg-[#1a1a1ae6] border-l-4 border-[#007CED] p-6 font-poppins text-white md:hidden shadow-xl z-40"
+            className="fixed top-0 right-0 bottom-0 h-screen w-[70%] sm:w-1/2 bg-[#1a1a1ae6] border-l-4 border-[#007CED] p-6 box-border font-poppins text-white md:hidden shadow-xl z-40 overflow-y-auto"
           >
-            <div className="flex flex-col space-y-6 text-lg mt-16">
+            <div className="flex flex-col space-y-6 text-lg mt-16 break-words">
               <a href="#sobre" onClick={() => setOpen(false)} className="hover:text-[#007CED] transition-colors duration-200">Sobre</a>
               <a href="#experiencia" onClick={() => setOpen(false)} className="hover:text-[#007CED] transition-colors duration-200">Experiência</a>
               <a href="#formacao" onClick={() => setOpen(false)} className="hover:text-[#007CED] transition-colors duration-200">Formação</a>

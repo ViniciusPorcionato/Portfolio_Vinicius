@@ -10,7 +10,7 @@ const Hero = () => {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8 }}
       viewport={{ amount: 0.2 }}
-      className="container mx-auto px-4 flex flex-col md:flex-row items-center justify-center gap-12 text-center md:text-left mt-[8%]"
+      className="w-full px-4 flex flex-col md:flex-row items-center justify-center gap-8 text-center md:text-left mt-16 max-w-5xl mx-auto"
     >
       <div className="relative mb-8 md:mb-0 md:mr-12">
         <img
@@ -23,17 +23,18 @@ const Hero = () => {
         <h2 className="text-3xl md:text-5xl font-poppins-bold text-white">
           Vinicius Porcionato
         </h2>
-        <p className="text-xl text-brand-blue mt-2 font-poppins-semibold text-[#FFFFFF] opacity-30">
+        <p className="text-xl mt-2 font-poppins-semibold text-[#FFFFFF] opacity-30">
           Full-Stack Developer
         </p>
-        <p className="text-[#FFFFFF] opacity-70 mt-4 max-w-xl font-poppins">
+        <p className="text-[#FFFFFF] opacity-70 mt-4 font-poppins">
           Olá mundo, sou o Vinicius Porcionato, um desenvolvedor Full Stack com
           foco em Backend, especializado em criar soluções completas, unindo
           interfaces modernas a sistemas robustos. Apaixonado por tecnologia e
           busco sempre evoluir para entregar projetos de alta performance,
           seguros e com ótima experiência do usuário.
         </p>
-        <div className="flex items-center justify-center md:justify-start space-x-6 mt-6">
+
+        <div className="flex flex-wrap items-center justify-center md:justify-start gap-4 mt-6">
           <a
             href="https://www.linkedin.com/in/vinicius-porcionato/"
             className="text-[#FFFFFF] opacity-80 hover:text-[#007CED] text-3xl transition-colors hover:scale-105 duration-200"
@@ -55,10 +56,9 @@ const Hero = () => {
           >
             <FaInstagram />
           </a>
-
           <a
             href="/Vinicius_Porcionato_CV.pdf"
-            download="Vinicius_Porcionato_CV.pdf"
+              
             className="font-poppins text-white opacity-80 border-2 rounded-xl px-4 py-2 hover:border-[#007CED] hover:opacity-100 hover:scale-105 duration-200 hover:shadow-[0_0_30px_rgba(0,114,255,0.8)]"
           >
             Download CV

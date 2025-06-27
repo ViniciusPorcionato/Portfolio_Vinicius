@@ -21,6 +21,10 @@ import { FaTrello } from "react-icons/fa";
 import { SiJupyter } from "react-icons/si";
 import { FaFigma } from "react-icons/fa";
 import { motion } from "framer-motion";
+import { SiCypress } from "react-icons/si";
+import { LuFileJson2 } from "react-icons/lu";
+import { SiStyledcomponents } from "react-icons/si";
+import { RiNextjsLine } from "react-icons/ri";
 
 const SkillCard = ({ name, icon }) => (
   <motion.div
@@ -54,6 +58,10 @@ const Skills = () => {
       icon: <FaReact />,
     },
     {
+      name: "Next Js",
+      icon: <RiNextjsLine />,
+    },
+    {
       name: "Tailwind CSS",
       icon: <RiTailwindCssFill />,
     },
@@ -64,6 +72,10 @@ const Skills = () => {
     {
       name: "React Native",
       icon: <FaReact />,
+    },
+    {
+      name: "Styled Components",
+      icon: <SiStyledcomponents />,
     },
   ];
   const backendSkills = [
@@ -103,6 +115,10 @@ const Skills = () => {
       name: "MongoDB",
       icon: <SiMongodb />,
     },
+    {
+      name: "JSON Server",
+      icon: <LuFileJson2 />,
+    },
   ];
   const otherSkills = [
     {
@@ -133,20 +149,24 @@ const Skills = () => {
       name: "Figma",
       icon: <FaFigma />,
     },
+    {
+      name: "Cypress",
+      icon: <SiCypress />,
+    },
   ];
 
   return (
-    <section id="tecnologias" className="container mx-auto px-4 py-16">
+    <section id="tecnologias" className="w-full max-w-6xl mx-auto px-4 py-16">
       <h3 className="text-3xl font-poppins-bold text-white mb-12 text-center">
         Tecnologias
       </h3>
 
-      <div className="max-w-4xl mx-auto mt-[10%]">
+      <div className="w-full mt-12">
         <div className="mb-10">
           <h4 className="text-2xl font-poppins-semibold text-white mb-6">
             Front-end skills
           </h4>
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 bg-[#222222]">
             {frontendSkills.map((skill) => (
               <SkillCard key={skill.name} name={skill.name} icon={skill.icon} />
             ))}
@@ -157,7 +177,7 @@ const Skills = () => {
           <h4 className="text-2xl font-poppins-semibold text-white mb-6">
             Back-end skills
           </h4>
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 bg-[#222222]">
             {backendSkills.map((skill) => (
               <SkillCard key={skill.name} name={skill.name} icon={skill.icon} />
             ))}
@@ -168,7 +188,7 @@ const Skills = () => {
           <h4 className="text-2xl font-poppins-semibold text-white mb-6">
             Outros
           </h4>
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 bg-[#222222]">
             {otherSkills.map((skill) => (
               <SkillCard key={skill.name} name={skill.name} icon={skill.icon} />
             ))}

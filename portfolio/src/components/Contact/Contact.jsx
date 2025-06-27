@@ -1,22 +1,23 @@
 import { BsFillTelephoneFill } from "react-icons/bs";
 import { MdEmail } from "react-icons/md";
-import { FaMapMarkerAlt, FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
+import {
+  FaMapMarkerAlt,
+  FaGithub,
+  FaLinkedin,
+  FaInstagram,
+} from "react-icons/fa";
 import { motion } from "framer-motion";
 
 const Contact = () => {
   return (
-    <motion.footer
+    <footer
       id="contato"
-      className="bg-dark-card py-12"
-      initial={{ opacity: 0, y: 30 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.8 }}
-      viewport={{ amount: 0.2 }}
+      className="py-12 "
     >
-      <div className="container mx-auto px-4 text-center">
+      <div className="w-full max-w-4xl mx-auto px-4 text-center">
         <h3 className="text-3xl font-poppins-bold text-white mb-8">Contato</h3>
 
-        <div className="flex flex-col md:flex-row justify-center items-center space-y-6 md:space-y-0 md:space-x-12 text-gray-text mb-10">
+        <div className="flex flex-col md:flex-row md:flex-wrap justify-center items-center gap-4 md:gap-12 text-gray-text mb-10">
           <div className="flex items-center space-x-2">
             <BsFillTelephoneFill color="white" />
             <span className="text-white opacity-80 font-poppins-semibold">
@@ -38,28 +39,28 @@ const Contact = () => {
         </div>
 
         {/* Redes sociais */}
-        <div className="flex justify-center space-x-6 mb-10">
+        <div className="flex justify-center space-x-6 mb-10 overflow-hidden">
           <a
-            href="https://github.com/viniciusporcionato"
+            href="https://github.com/ViniciusPorcionato"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-white hover:text-brand-blue transition-opacity duration-300 opacity-80 hover:opacity-100 hover:scale-105 duration-200"
+            className="text-white hover:text-brand-blue transition-transform duration-200 opacity-80 hover:opacity-100 hover:scale-105"
           >
             <FaGithub size={24} />
           </a>
           <a
-            href="https://www.linkedin.com/in/viniciusporcionato"
+            href="https://www.linkedin.com/in/vinicius-porcionato/"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-white hover:text-brand-blue transition-opacity duration-300 opacity-80 hover:opacity-100 hover:scale-105 duration-200"
+            className="text-white hover:text-brand-blue transition-transform duration-200 opacity-80 hover:opacity-100 hover:scale-105"
           >
             <FaLinkedin size={24} />
           </a>
           <a
-            href="https://www.instagram.com/viniciusporcionato"
+            href="https://www.instagram.com/vn.porci_/"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-white hover:text-brand-blue transition-opacity duration-300 opacity-80 hover:opacity-100 hover:scale-105 duration-200"
+            className="text-white hover:text-brand-blue transition-transform duration-200 opacity-80 hover:opacity-100 hover:scale-105"
           >
             <FaInstagram size={24} />
           </a>
@@ -69,7 +70,7 @@ const Contact = () => {
           © 2025 Vinicius Porcionato. Todos os direitos reservados.
         </p>
       </div>
-    </motion.footer>
+    </footer>
   );
 };
 

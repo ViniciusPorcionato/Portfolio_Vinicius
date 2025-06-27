@@ -34,8 +34,14 @@
   background: #005fa3;
 }
 
-html {
-  scroll-behavior: smooth;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  overflow-x: hidden;
 }
 
 body {
@@ -45,7 +51,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  overflow-x: hidden;
+  /* overflow-x: hidden; <-- Esta linha é redundante se já estiver no html, body {} */
+  /* Removido o overflow-x: hidden; duplicado aqui */
   
 }
 

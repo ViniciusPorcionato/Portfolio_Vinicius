@@ -1,5 +1,5 @@
-import PositivoImage from "../../assets/images/PositivoS+.jpg";
-import BrqImage from "../../assets/images/BRQ.png";
+import PositivoImage from "../../assets/images/PositivoS+.png";
+import BrqImage from "../../assets/images/BRQ.jpg";
 import { motion } from "framer-motion";
 
 const Experience = () => {
@@ -25,7 +25,7 @@ const Experience = () => {
   return (
     <section
       id="experiencia"
-      className="container mx-auto px-4 py-16 bg-[#222222] mt-[10%]"
+      className="w-full max-w-5xl mx-auto px-4 py-16 mt-[10%]"
     >
       <h3 className="text-3xl font-poppins-bold text-white mb-12 text-center">
         Experiência
